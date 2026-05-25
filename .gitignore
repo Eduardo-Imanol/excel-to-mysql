@@ -1,0 +1,9 @@
+tmp/
+main
+excel-to-mysql-backend
+*.exe
+.env
+.vscode/
+.idea/
+*.log
+build-errors.log
