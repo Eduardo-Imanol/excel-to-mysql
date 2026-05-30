@@ -177,11 +177,6 @@ go install github.com/air-verse/air@latest
 
 ### Paso 1: Clonar el repositorio
 
-```bash
-git clone https://github.com/tu-usuario/Excel_to_db_backend.git
-cd Excel_to_db_backend-main
-```
-
 ### Paso 2: Configurar variables de entorno
 
 ```bash
