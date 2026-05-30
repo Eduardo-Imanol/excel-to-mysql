@@ -520,29 +520,6 @@ class ApiService {
 
 ---
 
-## Despliegue en Railway
-
-Railway ofrece $5 de crédito mensual gratuito, suficiente para esta app + MySQL.
-
-1. **Crear cuenta:** [railway.app](https://railway.app) → Iniciar sesión con GitHub
-2. **Subir código:**
-
-```bash
-git init
-git add .
-git commit -m "Initial commit"
-git remote add origin https://github.com/tu-usuario/Excel_to_db_backend.git
-git push -u origin main
-```
-
-3. **Crear proyecto:** New Project → Deploy from GitHub repo
-4. **Agregar MySQL:** New → Database → Add MySQL
-5. **Desplegar:** Railway desplegará automáticamente
-
-La app quedará en: `https://tu-proyecto.up.railway.app`
-
----
-
 ## Tests
 
 ```bash
