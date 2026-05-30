@@ -1,22 +1,14 @@
 package models
 
 import (
-	// "time"
-
 	"gorm.io/gorm"
 )
 
-type Cal struct {
-	gorm.Model
-
-	Nombre     string `json:"nombre"`
-	Math       string `json:"math"`
-	Physical   string `json:"physical"`
-	Chemistry  string `json:"chemistry"`
-	Biologi    string `json:"biologi"`
-	Histori    string `json:"histori"`
-	Geografi   string `json:"geografi"`
-	Literature string `json:"literature"`
-	Spanish    string `json:"spanish"`
-	English    string `json:"english"`
+// Record representa un registro genérico (calificación, nombre, etc.).
+// Almacena un nombre y datos adicionales en formato JSON flexible.
+// Se usa la tabla "records" en MySQL.
+type Record struct {
+	gorm.Model                          // ID, CreatedAt, UpdatedAt, DeletedAt (soft delete)
+	Nombre string          `json:"nombre"` // Nombre del registro
+	Data   string          `json:"data" gorm:"type:json"` // Datos adicionales en JSON
 }

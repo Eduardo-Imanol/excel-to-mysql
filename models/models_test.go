@@ -4,49 +4,31 @@ import (
 	"testing"
 )
 
-func TestCalModelFields(t *testing.T) {
-	cal := Cal{
-		Nombre:     "Juan Pérez",
-		Math:       "90",
-		Physical:   "85",
-		Chemistry:  "88",
-		Biologi:    "92",
-		Histori:    "76",
-		Geografi:   "81",
-		Literature: "95",
-		Spanish:    "87",
-		English:    "93",
+func TestRecordModelFields(t *testing.T) {
+	record := Record{
+		Nombre: "Juan Pérez",
+		Data:   `{"math":"90","city":"Madrid"}`,
 	}
 
-	if cal.Nombre != "Juan Pérez" {
-		t.Errorf("expected Nombre 'Juan Pérez', got %q", cal.Nombre)
+	if record.Nombre != "Juan Pérez" {
+		t.Errorf("expected Nombre 'Juan Pérez', got %q", record.Nombre)
 	}
-	if cal.Math != "90" {
-		t.Errorf("expected Math '90', got %q", cal.Math)
+	if record.Data != `{"math":"90","city":"Madrid"}` {
+		t.Errorf("expected Data '{\"math\":\"90\",\"city\":\"Madrid\"}', got %q", record.Data)
 	}
-	if cal.Physical != "85" {
-		t.Errorf("expected Physical '85', got %q", cal.Physical)
+}
+
+func TestRecordModelEmptyData(t *testing.T) {
+	record := Record{
+		Nombre: "Sin datos",
+		Data:   "{}",
 	}
-	if cal.Chemistry != "88" {
-		t.Errorf("expected Chemistry '88', got %q", cal.Chemistry)
+
+	if record.Nombre != "Sin datos" {
+		t.Errorf("expected Nombre 'Sin datos', got %q", record.Nombre)
 	}
-	if cal.Biologi != "92" {
-		t.Errorf("expected Biologi '92', got %q", cal.Biologi)
-	}
-	if cal.Histori != "76" {
-		t.Errorf("expected Histori '76', got %q", cal.Histori)
-	}
-	if cal.Geografi != "81" {
-		t.Errorf("expected Geografi '81', got %q", cal.Geografi)
-	}
-	if cal.Literature != "95" {
-		t.Errorf("expected Literature '95', got %q", cal.Literature)
-	}
-	if cal.Spanish != "87" {
-		t.Errorf("expected Spanish '87', got %q", cal.Spanish)
-	}
-	if cal.English != "93" {
-		t.Errorf("expected English '93', got %q", cal.English)
+	if record.Data != "{}" {
+		t.Errorf("expected Data '{}', got %q", record.Data)
 	}
 }
 

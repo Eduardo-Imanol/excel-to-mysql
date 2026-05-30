@@ -1,0 +1,13 @@
+tmp/
+.git/
+.gitignore
+.env
+.env.example
+*.log
+build-errors.log
+README.md
+.air.toml
+railway.json
+Dockerfile
+docker-compose.yml
+.dockerignore
